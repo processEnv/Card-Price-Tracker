@@ -4,6 +4,7 @@ User will be able to track the flucation of card prices according to tcgplayer's
 
 ### Running the project
 
-- Make sure to clone the repository
-- Once cloned, open the folder in your IDE
-- Run the command `npm i` or `npm install` to install the dependencies
+-   Make sure to clone the repository
+-   Once cloned, open the folder in your IDE
+-   Run the command `npm i` or `npm install` to install the dependencies
+-   In order to start the project, use the command `npm run dev`
