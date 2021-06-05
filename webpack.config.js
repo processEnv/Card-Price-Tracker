@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 
 // Instantiate the plugin.
 // The `template` property defines the source
@@ -23,6 +25,7 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
+                include: path.resolve(__dirname, 'src'),
                 use: 'ts-loader',
                 exclude: /node_modules/
             }
@@ -43,7 +46,7 @@ module.exports = {
     },
 
     // Use the html plugin.
-    plugins: [htmlPlugin],
+    plugins: [htmlPlugin, new Dotenv()],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
